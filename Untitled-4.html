@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #010000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+body
+{
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+background: hsl(207, 19%,9%);
+} 
+
+h3
+{
+    background: hsl(207, 19%,9%);
+}
+
+.des
+{
+    background: hsl(207, 19%,9%);
+    color: white;
+    font-family: gotham;
+    font-size:x-large;
+    text-align:center;
+}
+form
+{
+    background: hsl(207, 19%,9%);
+    color: white;
+    font-family: gotham;
+    font-size:x-large;
+    text-align:center;
+}
+
+</style>
+</head>
+<body background>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="flip (2).jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="flip (3).jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="flip (4).jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="flip (1).jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="flip (6).jpg" style="width:100%">
+  </div>
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+<br>
+<br>
+<font size="10" face="bintank" color="yellow">
+<center><h3>Samsung Galaxy Z Flip Thom Browne Limited Edition</h3></center>
+</font>
+
+<p class ="des">
+    Samsung Electronics Co., Ltd. and Thom Browne revealed Galaxy Z Flip Thom Browne Edition, 
+    an exclusive collaboration from the leading technology company and iconic New York fashion brand. 
+    Galaxy Z Flip Thom Browne Edition draws on Samsung’s all new Galaxy Z Flip device and the fashion brand’s bold,
+     timeless style to introduce a groundbreaking foldable smartphone experience. 
+     <br>
+     <br>
+     <br>
+      <b>PRICE</b> $2450 
+      
+</p>
+
+      <form name="bid" onsubmit="check()">
+        Enter Your Bid Here
+        <input type="number" name="t1"><br><br>
+        <input type="submit">
+    </form>
+
+
+
+
+
+<script>
+
+function check()
+        {
+            var a;
+            a=bid.t1.value;
+            if(a>=2500)
+            alert("bid invalid")
+            else
+            alert("bid placed")
+
+        }
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 

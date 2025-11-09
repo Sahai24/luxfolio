@@ -1,0 +1,320 @@
+<html>
+    <head>      
+        <style>
+            h1{
+                color:#FFB744;
+            }
+    :root{
+    --clr-neutural-900: hsl(207,19%,9%);
+    --clr-neutural-100: hsl(0,0%,100%);
+    --clr-neutural-400: #FFB744;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+.navbar{
+                background-color:hsl(207,19%,18%);
+                border-radius: 30px;
+                
+            }
+            .navbar ul{
+                overflow: auto;
+            }
+            .navbar li{
+                float:left;
+                list-style: none; 
+                margin: 13px 20px;
+                
+            }
+            .navbar li a{
+                padding: 3px 3px;
+                text-decoration: none;
+                color: #FFB744;
+            }
+            .navbar li a:hover{
+                color: hsla(37, 73, 63, .9);
+            }
+            .search{
+                float: right;
+                color: white;
+
+                padding: 12px 75px;
+            }
+            .navbar input{
+                border: 2px solid black;
+                border-radius: 14px;
+                padding: 3px 17px;
+                width: 190px;
+            }
+            .sign_in{
+                float: right;
+                color: white;
+                padding: 12px 25px;
+            }
+            .sign_in a{
+                padding: 3px 3px;
+                text-decoration: none;
+                color: #FFB744;
+            }
+            .button_home
+{
+
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: hsl(207, 19%,9%);
+    padding: 0.25em 1.25em;
+    color:#ffb744;
+    font-family: bintank;
+    border-radius: 0.25em;
+    font-size: larger;
+}
+ .button_home:hover,
+.button_home:focus{
+    background-color:hsla(0, 0%, 100%, .15) 
+
+}
+
+body{
+    height: 300px;
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    line-height: 1.6;
+    font-family: sans-serif;
+    background: var(--clr-neutural-900);
+}
+
+.card{
+    color: var(--clr-neutural-100);
+    /* background-image: url("card_phone.jpg"); */
+    background-size: cover;
+    padding: 8rem 0 0 ;
+    max-width: 50ch;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.card:hover{
+    transform: scale(1.08);
+}
+
+.card-content{
+    --padding:1.5rem;
+    padding: var(--padding);
+    background:linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.3) 20%,
+        hsl(0 0% 0% / 1));
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+}
+
+.card:hover .card-content{
+    transform: translateY(0%);
+    transition-delay: 500ms;
+}
+
+.card-content > *:not(.card-title){
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+
+.card:hover .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 900ms;
+}
+
+.card-title{
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: calc(100% + var(--padding));
+    left: calc(var(--padding)*-1);
+    bottom: 0;
+    background: var(--clr-neutural-400);
+    transform: scalex(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after{
+    transform: scalex(1);
+
+}
+
+.card-body{
+    color: rgba(255, 255, 255, .8);
+}
+
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--clr-neutural-400);
+    padding: 0.25em 1.25em;
+    color: black;
+    border-radius: 0.25em;
+}
+
+.button:hover,
+.button:focus{
+    background-color: var(--clr-neutural-100);
+
+}
+
+.row2{
+    display: flex;
+    padding-left: 210px;
+}
+.row1{
+    display: flex;
+    padding-left: 210px;
+}
+.card1{
+    padding: 30px;
+}
+.card2{
+    padding: 30px;
+}
+        </style>
+    </head>
+    <Body>
+        <header>
+            <center>
+                <form name="bid" onsubmit="check()">
+                    <font face="bintank">
+                    <a href="home_m.html" target="_blank" class="button_home">Posh Affair</a>
+                    </font>
+                </form>
+            </center>
+    
+            <nav class="navbar" width="100%">
+                <ul>
+                    <font face="gotham">
+                        <li><a href="home_m.html" target="_blank">Home</a></li>
+                        <li><a href="smartphones.html">Smartphones</a></li>
+                        <li><a href="sneakers.html">Sneakers</a></li>
+                        <li><a href="watches.html">Wrist Watch</a></li>
+                        <li><a href="cars.html">Supercars</a></li>
+                        <div class="sign_in">
+                            <a href="log_in.html">Log in</a>
+                        </div>
+                    </font>
+                    <div class="search">
+                        <input type="text" name="search" id="search" placeholder="Search this website">
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <font face="bintank" size="20">
+            <center><h1>Smartphones</h1></center>
+        </font>
+            <font face="gotham">
+            <div class="row1">
+                <div class="card1" style="width:40%; float: left;">
+                    <div class="card" style="background-image: url(cadp.jpg);">
+                        <div class="card-content">
+                            <h2 class="card-title">iPhone x Caviar</h2>
+                            <p class="card-body">iPhone 14 Pro Red Rose Edition</p>
+                            <a href="iPhoneRedRose.html" class="button">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card2" style="width:40%; float: left;">
+                    <div class="card"  style="background-image: url(flip\ \(1\).jpg);">
+                        <div class="card-content">
+                            <h2 class="card-title">Samsung</h2>
+                            <p class="card-body">Samsung Galaxy Z Flip Thom Browne Limited Edition</p>
+                            <a href="SamsungZFlip.html" class="button">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row2">
+                <div class="card1" style="width:40%; float: left;">
+                    <div class="card"  style="background-image: url(note1.jpg);">
+                        <div class="card-content">
+                            <h2 class="card-title">Samsung</h2>
+                            <p class="card-body">Samsung Galaxy Note 10+ Star Wars Edition</p>
+                            <a href="SamsungGalaxyNote10+StarWarsEdition.html" class="button">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card2" style="width:40%; float: left;">
+                    <div class="card" style="background-image: url(op2.jpg);">
+                        <div class="card-content">
+                            <h2 class="card-title">OnePlus</h2>
+                            <p class="card-body">OnePlus 6 Marvel Avengers Edition</p>
+                            <a href="OnePlusMarvel.html" class="button">Buy now</a>
+            
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row1">
+                <div class="card1" style="width:40%; float: left;">
+                    <div class="card" style="background-image: url(hudp.jpg);">
+                        <div class="card-content">
+                            <h2 class="card-title">Huawei</h2>
+                            <p class="card-body">Mate 20 RS Porsche Design</p>
+                            <a href="Huawei.html" class="button">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card2" style="width:40%; float: left;">
+                    <div class="card"  style="background-image: url(po3.jpg);">
+                        <div class="card-content">
+                            <h2 class="card-title">Oppo</h2>
+                            <p class="card-body"> Find X2 League of Legends Edition</p>
+                            <a href="oppo.html" class="button">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row2">
+                <div class="card1" style="width:40%; float: left;">
+                    <div class="card"  style="background-image: url(rog6.jpg);">
+                        <div class="card-content">
+                            <h2 class="card-title">Asus</h2>
+                            <p class="card-body">ROG Phone 6 Batman Edition</p>
+                            <a href="asus.html" class="button">Buy now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card2" style="width:40%; float: left;">
+                    <div class="card" style="background-image: url(g1.jpg);">
+                        <div class="card-content">
+                            <h2 class="card-title">OnePlus</h2>
+                            <p class="card-body">Ace Pro Genshin Impact Limited Edition</p>
+                            <a href="Genshin.html" class="button">Buy now</a>
+            
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </font>
+        <footer>
+            <font face="Gotham" color=#ffb74>
+                <center>
+                    <p>For more info or any inquery contact us at info@poshaffair.com</p>
+                </center>
+            </font>
+        </footer>       
+    </Body>
+</html>>

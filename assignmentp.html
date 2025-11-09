@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+                body{
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-attachment: fixed;
+                }
+        </style>
+        <script>
+            function check()
+        {
+            var a;
+            a=bid.t1.value;
+            if(a>=2500)
+            alert("bid invalid")
+            else
+            alert("bid placed")
+
+        }
+        </script>
+    </head>
+    <body background="lava_1200x768.jpg">
+        <form name="bid" onsubmit="check()">
+            enter a number
+            <input type="number" name="t1"><br><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

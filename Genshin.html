@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 40%;
+  position: relative;
+  margin: auto;
+}
+.navbar{
+                background-color:hsl(207,19%,18%);
+                border-radius: 30px;
+                
+            }
+            .navbar ul{
+                overflow: auto;
+            }
+            .navbar li{
+                float:left;
+                list-style: none; 
+                margin: 13px 20px;
+                
+            }
+            .navbar li a{
+                padding: 3px 3px;
+                text-decoration: none;
+                color: #FFB744;
+            }
+            .navbar li a:hover{
+                color: hsla(37, 73, 63, .9);
+            }
+            .search{
+                float: right;
+                color: white;
+
+                padding: 12px 75px;
+            }
+            .navbar input{
+                border: 2px solid black;
+                border-radius: 14px;
+                padding: 3px 17px;
+                width: 190px;
+            }
+            .sign_in{
+                float: right;
+                color: white;
+                padding: 12px 25px;
+            }
+            .sign_in a{
+                padding: 3px 3px;
+                text-decoration: none;
+                color: #FFB744;
+            }
+            .button_home
+{
+
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: hsl(207, 19%,9%);
+    padding: 0.25em 1.25em;
+    color:#ffb744;
+    font-family: bintank;
+    border-radius: 0.25em;
+    font-size: larger;
+}
+ .button_home:hover,
+.button_home:focus{
+    background-color:hsla(0, 0%, 100%, .15) 
+
+}
+
+.product{
+    display: flex;
+}
+.p_content{
+    max-width: 50%;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #010000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+body
+{
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+background: hsl(207, 19%,9%);
+} 
+
+h3
+{
+    background: hsl(207, 19%,9%);
+}
+
+.des
+{
+    background: hsl(207, 19%,9%);
+    color: white;
+    font-family: gotham;
+    font-size:x-large;
+    text-align:center;
+}
+form
+{
+    background: hsl(207, 19%,9%);
+    color: white;
+    font-family: gotham;
+    font-size:x-large;
+    text-align:center;
+
+}
+.bid_button 
+{
+    border-radius: 0.25em;
+    padding: 0.25em 1.25 em;
+    font-family: gotham;
+    padding: 10px;
+    font-size: medium;
+    background-color:#ffb744;
+
+
+
+}
+.button_home
+ {
+
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+        background-color: hsl(207, 19%,9%);
+        padding: 0.25em 1.25em;
+        color:#ffb744;
+        font-family:bintank;
+        border-radius: 0.25em;
+        font-size: larger;
+        text-align: left    ;
+ }  
+ 
+ .button_home:hover,
+.button_home:focus{
+    background-color:hsla(0, 0%, 100%, .1) 
+
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+        <center>
+            <form name="bid" onsubmit="check()">
+                <font face="bintank">
+                <a href="home_m.html" target="_blank" class="button_home">Posh Affair</a>
+                </font>
+            </form>
+        </center>
+
+        <nav class="navbar" width="100%">
+            <ul>
+                <font face="gotham">
+                    <li><a href="home_m.html" target="_blank">Home</a></li>
+                    <li><a href="smartphones.html">Smartphones</a></li>
+                    <li><a href="sneakers.html">Sneakers</a></li>
+                    <li><a href="watches.html">Wrist Watch</a></li>
+                    <li><a href="cars.html">Supercars</a></li>
+                    <div class="sign_in">
+                        <a href="log_in.html">Log in</a>
+                    </div>
+                </font>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search this website">
+                </div>
+            </ul>
+        </nav>
+    </header>
+    
+    </form>
+        <div class="product">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="g1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="g5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="g3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="g4.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="g6.jpg" style="width:100%">
+            </div>
+
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+    
+
+            <br>
+            <br>
+            <br>
+            <div class="p_content">
+                <div class="P_head">
+                    <font size="10" face="bintank" color=#ffb744>
+                        <center><h3>OnePlus Ace Pro Genshin Impact Limited Edition</h3></center>
+                    </font>
+                </div>
+                <div class="p_des">
+                    <p class ="des">
+                        The OnePlus Ace Pro Genshin Impact Limited Edition smartphone comes in a dark brown colour and has the
+                         logo of a popular character from "Genshin Impact". Its design incorporates some iconic elements like 
+                         plum blossoms, butterflies, and flames from the video game. The phone is packaged in a textured Liyue
+                          Gang gift box along with a custom charger, a heat dissipation protective case, an acrylic ornament made
+                           of walnut, and walnut-coloured custom emoji stickers and posters. As mentioned above, the new OnePlus 
+                           phone adds extensive customisations including -- the boot animation, fingerprint unlocking animation,
+                            off-screen clock, live wallpaper, 60 frequently used custom Genshin Impact app icons, and walnut original 
+                            voice that has been added to the voice assistant.
+                        <br>
+                        <br>
+                        <br>
+                        <b>PRICE</b> $1729
+
+                        <form>
+                            <button class="bid_button" onclick="check()"><B>Bid</B></button>
+                        </form>
+                
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+
+
+
+
+    <script>
+
+function check()
+        {
+           var bid=prompt("Enter Your Bid here");
+           if(bid>1729)
+           alert("bid placed!");
+           else
+           alert(" tera ghar jaenga ");
+        }
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+    </script>
+    <footer>
+        <font face="Gotham" color=#ffb74>
+            <center>
+                <p>For more info or any inquery contact us at info@poshaffair.com</p>
+            </center>
+        </font>
+    </footer>
+
+</body>
+</html> 

@@ -1,0 +1,322 @@
+<!doctype html>
+    <html>
+        <head>
+            <title>HOME</title>
+            <style>
+                .navbar{
+                background-color:hsl(207,19%,18%);
+                border-radius: 30px;
+                
+            }
+            .navbar ul{
+                overflow: auto;
+            }
+            .navbar li{
+                float:left;
+                list-style: none; 
+                margin: 13px 20px;
+                
+            }
+            .navbar li a{
+                padding: 3px 3px;
+                text-decoration: none;
+                color: #FFB744;
+            }
+            .navbar li a:hover{
+                color: hsla(37, 73, 63, .9);
+            }
+            .search{
+                float: right;
+                color: white;
+
+                padding: 12px 75px;
+            }
+            .navbar input{
+                border: 2px solid black;
+                border-radius: 14px;
+                padding: 3px 17px;
+                width: 190px;
+            }
+            .sign_in{
+                float: right;
+                color: white;
+                padding: 12px 25px;
+            }
+            .sign_in a{
+                padding: 3px 3px;
+                text-decoration: none;
+                color: #FFB744;
+            }
+                :root{
+    --clr-neutural-900: hsl(207,19%,9%);
+    --clr-neutural-100: hsl(0,0%,100%);
+    --clr-neutural-400: #ffb744;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    height: 300px;
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    line-height: 1.6;
+    font-family: sans-serif;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-image: url(go.JPG);
+}
+
+.card{
+    color: var(--clr-neutural-100);
+    background-size: cover;
+    padding: 8rem 0 0 ;
+    max-width: 60ch;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.card:hover{
+    transform: scale(1.08);
+}
+
+.card-content{
+    --padding:1.5rem;
+    padding: var(--padding);
+    background:linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.3) 20%,
+        hsl(0 0% 0% / 1));
+    transform: translateY(47%);
+    transition: transform 500ms ease;
+}
+
+.card:hover .card-content{
+    transform: translateY(0%);
+    transition-delay: 500ms;
+}
+
+.card-content > *:not(.card-title){
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+
+.card:hover .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 900ms;
+}
+
+.card-title{
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: calc(100% + var(--padding));
+    left: calc(var(--padding)*-1); 
+    bottom: 0;
+    background: var(--clr-neutural-400);
+    transform: scalex(0);
+    transform-origin: middle;
+    transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after{
+    transform: scalex(1);
+
+}
+
+.card-body{
+    color: rgba(244, 82, 82, 0.8);
+}
+
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--clr-neutural-400);
+    padding: 0.25em 1.25em;
+    color: black;
+    border-radius: 0.25em;
+}
+.button:hover,
+.button:focus{
+    background-color: var(--clr-neutural-100);
+
+}
+
+.row2{
+    display: flex;
+    border-image-width: auto;
+}
+.row1{
+    display: flex;
+}
+.card1{
+    padding: 10px;
+}
+.card2{
+    padding: 10px;
+}
+
+.button_home
+{
+
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+        background-color: hsl(207, 19%,9%);
+        padding: 1.25em 1.25em;
+        color:#ffb744;
+        font-family:bintank;
+        border-radius: 0.25em;
+        font-size: larger;
+        text-align: left;
+ }  
+ 
+
+.button_home:hover,
+.button_home:focus{
+    background-color:hsla(0, 0%, 100%, .1) 
+
+}
+p
+{
+    padding-left: 150px;
+    font-family: "Gotham";
+    padding-right: 150px;
+    color: gold;
+}
+h1
+{
+    font-family: "bintank";
+    font-size: 2CM;
+    font-style: oblique;
+    color: goldenrod;
+    text-align: center;
+    
+}
+            </style>
+        </head>
+        <body>
+            <header>
+                <nav class="navbar" width="100%">
+                    <ul>
+                        <li><a href="home_m.html" target="_blank">Home</a></li>
+                        <li><a href="smartphones.html">Smartphones</a></li>
+                        <li><a href="sneakers.html">Sneakers</a></li>
+                        <li><a href="watches.html">Wrist Watch</a></li>
+                        <li><a href="cars.html">Supercars</a></li>
+                        <div class="sign_in">
+                            <a href="log_in.html">Log in</a>
+                        </div>
+                        <div class="search">
+                            <input type="text" name="search" id="search" placeholder="Search this website">
+                        </div>
+                    </ul>
+                </nav>
+            </header>
+            <h1>SNEAKERS</h1>
+
+            <center>
+                <font face="gotham">
+                
+                    <div class="row1">
+                        <div class="card1" style="width:60%; float: left;">
+                            <div class="card" style="background-image: url(solidgold.jpg.webp);">
+                                <div class="card-content">
+                                    <h2 class="card-title">Solid Gold OVO x Air Jordans</h2>
+                                    
+                                    <a href="page1.html" class="button">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card2" style="width:60%; float: left;">
+                            <div class="card" style="background-image: url(yeezy1.jpg.webp);">
+                                <div class="card-content">
+                                    <h2 class="card-title">Kayne West Nike Air Yeezy 1 </h2>
+                                    
+                                    <a href="page2.html" class="button">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="row1">
+                        <div class="card1" style="width:60%; float: left;">
+                            <div class="card" style="background-image: url(IMG_0995.jpg);">
+                                <div class="card-content">
+                                    <h2 class="card-title">Air Jordan 1 Retro Reverse </h2>
+                                
+                                    <a href="page3.html" class="button">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card2" style="width:60%; float: left;">
+                            <div class="card" style="background-image: url(buscemi.jpg.webp);">
+                                <div class="card-content">
+                                    <h2 class="card-title">Buscemi 100mm Diamond</h2>
+                                                
+                                    <a href="page4.html" class="button">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row1">
+                        <div class="card1" style="width:60%; float: left;">
+                            <div class="card" style="background-image: url(paris.jpg.webp);">
+                                <div class="card-content">
+                                    <h2 class="card-title">Nike Dunk SB Low Paris</h2>
+                                        
+                                    <a href="page5.html" class="button">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card2" style="width:60%; float: left;">
+                            <div class="card" style="background-image: url(lv2.jpg.webp);">
+                                <div class="card-content">
+                                    <h2 class="card-title">Louis Vuitton x Nike Air Force 1</h2>
+                                    
+                                    <a href="page6.html" class="button">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row1">
+                        <div class="card1" style="width:60%; float: left;">
+                            <div class="card" style="background-image: url(off3.jpg);">
+                                <div class="card-content">
+                                    <h2 class="card-title">Air Jordan 1 Retro high Off-White</h2>
+                                
+                                    <a href="page7.html" class="button">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card2" style="width:60%; float: left;">
+                            <div class="card" style="background-image: url(jordan4.jpg.webp);">
+                                <div class="card-content">
+                                    <h2 class="card-title">Eminem X Carhart Air Jordan 4 </h2>
+                                    
+                                    <a href="page8.html" class="button">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </font>
+            </center>
+                <br>
+               <p>  For more info contact us at info.poshaffair.com</p>
+            <br>
+    
+        </body>
+    </html>
+</doctype>

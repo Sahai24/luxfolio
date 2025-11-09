@@ -1,0 +1,182 @@
+:root{
+    --clr-neutural-900: hsl(207,19%,9%);
+    --clr-neutural-100: hsl(0,0%,100%);
+    --clr-neutural-400: #FFB744;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    height: 300px;
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    line-height: 1.6;
+    font-family: sans-serif;
+    padding-left: 200px;
+    background-image: url(Watcho.jpg)
+}
+
+.card{
+    color: var(--clr-neutural-100);
+    background-size: cover;
+    padding: 8rem 0 0 ;
+    max-width: 60ch;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.card:hover{
+    transform: scale(1.08);
+}
+
+.card-content{
+    --padding:1.5rem;
+    padding: var(--padding);
+    background:linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.3) 20%,
+        hsl(0 0% 0% / 1));
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+}
+
+.card:hover .card-content{
+    transform: translateY(0%);
+    transition-delay: 500ms;
+}
+
+.card-content > *:not(.card-title){
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+
+.card:hover .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 900ms;
+}
+
+.card-title{
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: calc(100% + var(--padding));
+    left: calc(var(--padding)*-1); 
+    bottom: 0;
+    background: var(--clr-neutural-400);
+    transform: scalex(0);
+    transform-origin: middle;
+    transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after{
+    transform: scalex(1);
+
+}
+
+.card-body{
+    color: rgba(255, 255, 255, .8);
+}
+
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--clr-neutural-400);
+    padding: 0.25em 1.25em;
+    color: black;
+    border-radius: 0.25em;
+}
+
+.button:hover,
+.button:focus{
+    background-color: var(--clr-neutural-100);
+
+}
+
+.row2{
+    display: flex;
+    border-image-width: auto;
+}
+.row1{
+    display: flex;
+}
+.card1{
+    padding: 20px;
+}
+.card2{
+    padding: 20px;
+}
+
+.button_home
+{
+
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: hsl(207, 19%,9%);
+    padding: 0.25em 1.25em;
+    color:#ffb744;
+    font-family: bintank;
+    border-radius: 0.25em;
+    font-size: larger;
+}
+ .button_home:hover,
+.button_home:focus{
+    background-color:hsla(0, 0%, 100%, .15) 
+
+}
+
+.navbar{
+    background-color:hsl(207,19%,18%);
+    border-radius: 30px;
+    
+}
+.navbar ul{
+    overflow: auto;
+}
+.navbar li{
+    float:left;
+    list-style: none; 
+    margin: 13px 20px;
+    
+}
+.navbar li a{
+    padding: 3px 3px;
+    text-decoration: none;
+    color: #FFB744;
+}
+.navbar li a:hover{
+    color: hsla(37, 73, 63, .9);
+}
+.search{
+    float: right;
+    color: white;
+
+    padding: 12px 75px;
+}
+.navbar input{
+    border: 2px solid black;
+    border-radius: 14px;
+    padding: 3px 17px;
+    width: 190px;
+}
+.sign_in{
+    float: right;
+    color: white;
+    padding: 12px 25px;
+}
+.sign_in a{
+    padding: 3px 3px;
+    text-decoration: none;
+    color: #FFB744;
+}
